@@ -4,7 +4,7 @@ from collections import defaultdict
 
 from app import ask_llm, is_leaked
 
-REPEATS = 1     # har attack kitni baar bhejna hai
+REPEATS = 3    # har attack kitni baar bhejna hai
 DELAY = 1.0     # do calls ke beech ruk-na (rate limit se bachne ke liye)
 
 
