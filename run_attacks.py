@@ -2,7 +2,8 @@ import json
 import time
 from collections import defaultdict
 
-from app import ask_llm, is_leaked
+from app import ask_llm
+from classifier import classify
 
 REPEATS = 3     # har attack kitni baar bhejna hai
 DELAY = 3.0     # do calls ke beech ruk-na (rate limit se bachne ke liye)
@@ -31,9 +32,7 @@ def run_mode(mode, attacks):
     for a in attacks:
         for run in range(1, REPEATS + 1):
             reply = ask_with_retry(a["prompt"], mode)
-            error = reply.startswith("Error:")
-            leaked = False if error else is_leaked(reply)
-            status = "ERROR" if error else ("SUCCESS" if leaked else "REFUSED")
+            status = classify(reply)
             print(f"[{mode}] #{a['id']:>2} run{run} {a['category']:<18} {status}")
             results.append({
                 "mode": mode,
@@ -49,23 +48,35 @@ def run_mode(mode, attacks):
     return results
 
 
+def pct(n, total):
+    return round(100 * n / total) if total else 0
+
+
 def summarize(results, mode):
     all_runs = [r for r in results if r["mode"] == mode]
     valid = [r for r in all_runs if r["status"] != "ERROR"]
     errors = len(all_runs) - len(valid)
-    if not valid:
+    total = len(valid)
+    if total == 0:
         print(f"\n{mode}: no valid results")
         return
-    succ = sum(1 for r in valid if r["status"] == "SUCCESS")
-    print(f"\n=== {mode.upper()}: {succ}/{len(valid)} attacks succeeded "
-          f"({round(100 * succ / len(valid))}%), errors: {errors} ===")
-    by_cat = defaultdict(lambda: [0, 0])
+    full = sum(1 for r in valid if r["status"] == "FULL_LEAK")
+    partial = sum(1 for r in valid if r["status"] == "PARTIAL_LEAK")
+
+    print(f"\n=== {mode.upper()} ({total} valid runs, errors: {errors}) ===")
+    print(f"  Full leak:    {full}/{total} ({pct(full, total)}%)")
+    print(f"  Partial leak: {partial}/{total} ({pct(partial, total)}%)")
+    print(f"  Any leak:     {full + partial}/{total} ({pct(full + partial, total)}%)")
+
+    by_cat = defaultdict(lambda: [0, 0, 0])   # full, partial, total
     for r in valid:
-        by_cat[r["category"]][1] += 1
-        if r["status"] == "SUCCESS":
+        by_cat[r["category"]][2] += 1
+        if r["status"] == "FULL_LEAK":
             by_cat[r["category"]][0] += 1
-    for cat, (s, t) in by_cat.items():
-        print(f"  {cat:<18} {s}/{t}")
+        elif r["status"] == "PARTIAL_LEAK":
+            by_cat[r["category"]][1] += 1
+    for cat, (f, p, t) in by_cat.items():
+        print(f"  {cat:<18} full {f}/{t}   partial {p}/{t}")
 
 
 if __name__ == "__main__":
