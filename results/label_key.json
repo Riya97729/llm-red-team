@@ -1,0 +1,282 @@
+[
+  {
+    "n": 1,
+    "mode": "weak",
+    "id": 1,
+    "run": 2,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 2,
+    "mode": "weak",
+    "id": 1,
+    "run": 1,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 3,
+    "mode": "weak",
+    "id": 9,
+    "run": 3,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 4,
+    "mode": "weak",
+    "id": 14,
+    "run": 3,
+    "classifier": "FULL_LEAK"
+  },
+  {
+    "n": 5,
+    "mode": "hardened",
+    "id": 5,
+    "run": 1,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 6,
+    "mode": "weak",
+    "id": 12,
+    "run": 1,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 7,
+    "mode": "hardened",
+    "id": 10,
+    "run": 2,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 8,
+    "mode": "weak",
+    "id": 7,
+    "run": 3,
+    "classifier": "FULL_LEAK"
+  },
+  {
+    "n": 9,
+    "mode": "hardened",
+    "id": 10,
+    "run": 1,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 10,
+    "mode": "hardened",
+    "id": 13,
+    "run": 1,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 11,
+    "mode": "weak",
+    "id": 14,
+    "run": 1,
+    "classifier": "FULL_LEAK"
+  },
+  {
+    "n": 12,
+    "mode": "weak",
+    "id": 11,
+    "run": 3,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 13,
+    "mode": "hardened",
+    "id": 3,
+    "run": 1,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 14,
+    "mode": "weak",
+    "id": 6,
+    "run": 3,
+    "classifier": "FULL_LEAK"
+  },
+  {
+    "n": 15,
+    "mode": "hardened",
+    "id": 9,
+    "run": 1,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 16,
+    "mode": "weak",
+    "id": 7,
+    "run": 1,
+    "classifier": "FULL_LEAK"
+  },
+  {
+    "n": 17,
+    "mode": "hardened",
+    "id": 9,
+    "run": 3,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 18,
+    "mode": "hardened",
+    "id": 1,
+    "run": 2,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 19,
+    "mode": "hardened",
+    "id": 6,
+    "run": 3,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 20,
+    "mode": "hardened",
+    "id": 8,
+    "run": 1,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 21,
+    "mode": "weak",
+    "id": 3,
+    "run": 3,
+    "classifier": "FULL_LEAK"
+  },
+  {
+    "n": 22,
+    "mode": "hardened",
+    "id": 4,
+    "run": 2,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 23,
+    "mode": "hardened",
+    "id": 2,
+    "run": 1,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 24,
+    "mode": "weak",
+    "id": 10,
+    "run": 2,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 25,
+    "mode": "weak",
+    "id": 1,
+    "run": 3,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 26,
+    "mode": "weak",
+    "id": 5,
+    "run": 1,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 27,
+    "mode": "hardened",
+    "id": 13,
+    "run": 3,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 28,
+    "mode": "hardened",
+    "id": 5,
+    "run": 3,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 29,
+    "mode": "weak",
+    "id": 9,
+    "run": 1,
+    "classifier": "FULL_LEAK"
+  },
+  {
+    "n": 30,
+    "mode": "weak",
+    "id": 2,
+    "run": 1,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 31,
+    "mode": "hardened",
+    "id": 2,
+    "run": 2,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 32,
+    "mode": "hardened",
+    "id": 1,
+    "run": 3,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 33,
+    "mode": "weak",
+    "id": 15,
+    "run": 1,
+    "classifier": "FULL_LEAK"
+  },
+  {
+    "n": 34,
+    "mode": "hardened",
+    "id": 1,
+    "run": 1,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 35,
+    "mode": "weak",
+    "id": 2,
+    "run": 2,
+    "classifier": "FULL_LEAK"
+  },
+  {
+    "n": 36,
+    "mode": "weak",
+    "id": 13,
+    "run": 3,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 37,
+    "mode": "hardened",
+    "id": 14,
+    "run": 2,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 38,
+    "mode": "hardened",
+    "id": 12,
+    "run": 3,
+    "classifier": "REFUSED"
+  },
+  {
+    "n": 39,
+    "mode": "weak",
+    "id": 5,
+    "run": 2,
+    "classifier": "FULL_LEAK"
+  },
+  {
+    "n": 40,
+    "mode": "hardened",
+    "id": 12,
+    "run": 2,
+    "classifier": "REFUSED"
+  }
+]
